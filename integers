@@ -1,0 +1,51 @@
+def is_prime(n):
+  """Check if a number is prime."""
+  if n <= 1:
+      return False
+  if n <= 3:
+      return True
+  if n % 2 == 0 or n % 3 == 0:
+      return False
+  i = 5
+  while i * i <= n:
+      if n % i == 0 or n % (i + 2) == 0:
+          return False
+      i += 6
+  return True
+
+def sum_of_digits(num):
+  """Return the sum of the digits of a number."""
+  return sum(int(digit) for digit in str(num))
+
+def product_of_numbers(a, b):
+  """Return the product of two numbers."""
+  return a * b
+
+def display_digits(num):
+  """Display all digits of a number separately."""
+  print(' '.join(digit for digit in str(num)))
+
+def main():
+  
+  a = int(input("Enter the first integer: "))
+  b = int(input("Enter the second integer: "))
+
+  difference = abs(a - b)
+
+  if difference % 2 == 0:
+      
+      print("Sum of the digits:")
+      print(sum_of_digits(a) + sum_of_digits(b))
+
+  if difference in {2, 3, 5, 7}:
+      
+      print("Product of the numbers:")
+      print(product_of_numbers(a, b))
+
+  if str(difference).endswith('4'):
+     
+      print("Digits of the difference:")
+      display_digits(difference)
+
+if __name__ == "__main__":
+  main()
