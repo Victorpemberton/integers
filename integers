@@ -1,5 +1,5 @@
 def is_prime(n):
-  """Check if a number is prime."""
+  
   if n <= 1:
       return False
   if n <= 3:
@@ -14,15 +14,15 @@ def is_prime(n):
   return True
 
 def sum_of_digits(num):
-  """Return the sum of the digits of a number."""
+ 
   return sum(int(digit) for digit in str(num))
 
 def product_of_numbers(a, b):
-  """Return the product of two numbers."""
+ 
   return a * b
 
 def display_digits(num):
-  """Display all digits of a number separately."""
+ 
   print(' '.join(digit for digit in str(num)))
 
 def main():
